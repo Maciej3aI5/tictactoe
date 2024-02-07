@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+    <style>
+        #kwadrat
+        {
+            width: 50vw; /* 50% szerokości ekranu */
+            height: 50vw; /* 50% wysokości ekranu */
+            max-width: 500px; /* maksymalna szerokość 500 pikseli */
+            max-height: 500px; /* maksymalna wysokość 500 pikseli */
+            position: fixed;
+            left:50%;
+            top:50%;
+            transform: translate(-50%,-50%);
+        }
+        #level-title {
+            font-family: 'Press Start 2P', cursive;
+            font-size: 3rem;
+            margin:  5%;
+            color: #FEF2BF;
+        }
+        @media screen and (max-width: 768px) {
+            #level-title {
+                font-size: 2rem; /* Pomniejsz czcionkę dla mniejszych ekranów */
+            }
+        }
+        body
+        {
+            background-color: #011F3F;
+        }
+        #naglowek
+        {
+            width: 100%;
+            text-align: center;
+        }
+        .pola
+        {
+            border:6px solid whitesmoke;
+        }
+        #overlay
+        {
+            position: fixed;
+            top:0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="container">
+        <div id="naglowek">
+            <h1 id="level-title">Press A to start</h1>
+        </div>
+        <div id="kwadrat" class="grid grid-cols-3 grid-rows-3 gap-6">
+            
+        </div>
+        <div id="overlay">
+
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
